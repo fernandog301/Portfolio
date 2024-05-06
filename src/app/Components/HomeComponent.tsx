@@ -16,11 +16,15 @@ import resume from "../Assets/resume@2x.webp";
 import AboutCompoenent from "./AboutCompoenent";
 import ProjectsComponents from "./ProjectsComponents";
 import Skills from "./SkillsComponents";
+import { Boxes } from "./ui/background-boxes";
+import { cn } from "../utils/cn";
+import Fern from "../Assets/IMG_0464.jpg"
+import ContactComponents from "./ContactComponents";
 
 export default function HomeComponent() {
   return (
     <>
-      <div className="mx-auto mb-5">
+      <div className="mx-auto ">
         <Navbar fluid rounded>
           <NavbarBrand src={Link} href="#">
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
@@ -48,22 +52,36 @@ export default function HomeComponent() {
         </Navbar>
       </div>
       <div>
+        <div>
+          <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+            <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+
+            <Boxes className=""/>
+            <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
+              <h1 className="py-4 text-white">
+                Hi, I&#39;m{" "}
+                <span className="text-[#a09f9d]">Fernando Gutierrez</span>
+              </h1>
+              <p className="uppercase text-sm tracking-widest mt-4 text-white">
+                LET&#39;S BUILD SOMETHING TOGETHER
+              </p>
+              
+              
+            </h1>
+
+            <p className="py-4 text-center mt-2 text-neutral-300 relative z-20 sm:max-w-[70%] m-auto"></p>
+          </div>
+        </div>
         <div id="home" className="w-full h-screen text-center md:mt-20">
           <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-            <div >
+            <div>
               <img
                 className="h-[400px] md:h-[500px] lg:h-[600px] pl-5 md:pl-10 mx-auto"
-                src={Fernando.src}
+                src={Fern.src}
                 alt="Fernando"
               />
               {/* </div> */}
 
-              <p className="uppercase text-sm tracking-widest mt-4 text-white">
-                LET&#39;S BUILD SOMETHING TOGETHER
-              </p>
-              <h1 className="py-4 text-white">
-                Hi, I&#39;m <span className="text-[#a09f9d]">Fernando Gutierrez</span>
-              </h1>
               <h1 className="py-2 text-white">A full-stack Web Developer</h1>
               <p className="py-4 text-white sm:max-w-[70%] m-auto">
                 My primary focus revolves around crafting dynamic and responsive
@@ -108,13 +126,16 @@ export default function HomeComponent() {
           </div>
         </div>
         <AboutCompoenent />
-        <Skills/>
+        <Skills />
+      </div>
+
+      <div className="pb-5">
+        <ProjectsComponents />
       </div>
 
       <div>
-        <ProjectsComponents/>
-
-      </div>
+        <ContactComponents/>
+        </div>
     </>
   );
 }

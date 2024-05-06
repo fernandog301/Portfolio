@@ -1,5 +1,10 @@
 import type { Config } from "tailwindcss";
 const flowbite = require("flowbite-react/tailwind");
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -9,8 +14,11 @@ const config: Config = {
     "./node_modules/flowbite-react/lib/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
+    "./src/**/*.{ts,tsx}",
     flowbite.content(),
+
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -21,7 +29,19 @@ const config: Config = {
     },
   },
   plugins: [
+    addVariablesForColors,
     flowbite.plugin(),
   ],
 };
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
 export default config;

@@ -6,6 +6,9 @@ import React from "../Assets/react.png";
 import node from "../Assets/node.png";
 import tailwind from "../Assets/tailwind.png";
 import css from "../Assets/css.png";
+import Weather from "../Assets/10.png"
+import Prometo from "../Assets/Screenshot 2024-05-06 162358.png"
+
 
 const ProjectsComponents = () => {
   return (
@@ -17,47 +20,24 @@ const ProjectsComponents = () => {
         <h2 className="py-4 text-white">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectsIteams
-            title="Property Finder"
-            backgroundImg={React.src}
-            projectUrl="/property"
-            tech="React JS"
+            title="Prometo Food truck Backend"
+            backgroundImg={Prometo.src}
+            projectUrl="https://github.com/fernandog301/PrometoFoodTrucksBackEnds.git"
+            tech="Prometo Food truck Back-end"
           />
           <ProjectsIteams
-            title="Crypto App"
-            backgroundImg={React.src}
-            projectUrl="/crypto"
-            tech="React JS"
+            title="Prometo food truck"
+            backgroundImg={Prometo.src}
+            projectUrl="https://github.com/fernandog301/prometofoodtrucks.git"
+            tech="Prometo food truck Front-end"
           />
           <ProjectsIteams
-            title="Crypto App"
-            backgroundImg={css.src}
-            projectUrl="/crypto"
-            tech="React JS"
+            title="Weather App"
+            backgroundImg={Weather.src}
+            projectUrl="https://github.com/fernandog301/GutierrezFweatherredo.gito"
+            tech="Weather App"
           />
-          <ProjectsIteams
-            title="Netflix App"
-            backgroundImg={JavaScript.src}
-            projectUrl="/netflix"
-            tech="React JS"
-          />
-          <ProjectsIteams
-            title="Twitch UI"
-            backgroundImg={React.src}
-            projectUrl="/twitch"
-            tech="Next JS"
-          />
-          <ProjectsIteams
-            title="Twitch UI"
-            backgroundImg={tailwind.src}
-            projectUrl="/twitch"
-            tech="Next JS"
-          />
-          <ProjectsIteams
-            title="Twitch UI"
-            backgroundImg={node.src}
-            projectUrl="/twitch"
-            tech="Next JS"
-          />
+          
         </div>
       </div>
     </div>
