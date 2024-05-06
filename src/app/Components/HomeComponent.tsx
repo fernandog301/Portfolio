@@ -20,7 +20,7 @@ import Skills from "./SkillsComponents";
 export default function HomeComponent() {
   return (
     <>
-      <div className="mx-auto ">
+      <div className="mx-auto mb-5">
         <Navbar fluid rounded>
           <NavbarBrand src={Link} href="#">
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
@@ -48,9 +48,9 @@ export default function HomeComponent() {
         </Navbar>
       </div>
       <div>
-        <div id="home" className="w-full h-screen text-center">
+        <div id="home" className="w-full h-screen text-center md:mt-20">
           <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-            <div>
+            <div >
               <img
                 className="h-[400px] md:h-[500px] lg:h-[600px] pl-5 md:pl-10 mx-auto"
                 src={Fernando.src}

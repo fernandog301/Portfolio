@@ -10,7 +10,6 @@ import Nextjs from "../Assets/nextjs7685.logowik.com.webp"
 import bootStrap from "../Assets/Bootstrap_logo.svg"
 import Net from "../Assets/Microsoft_.NET_logo.svg"
 
-import { Html } from "next/document";
 
 const Skills = () => {
     return (
