@@ -14,7 +14,7 @@ export default function AboutCompoenent() {
           </p>
           <h2 className='py-4 text-white'>Who I Am</h2>
           <p className='py-2 text-white'>
-            I specialize in building mobile responsive front-end UI applications
+            I specialize in building responsive front-end UI applications
             that connect with API’s and other backend technologies. I’m
             passionate about learning new technologies and understand there is
             more than one way to accomplish a task. Though I am most proficient
@@ -26,11 +26,11 @@ export default function AboutCompoenent() {
           <p className='py-2 text-white'>
             
           </p>
-          <Link href='/#projects'>
+          {/* <Link href='/#projects'>
             <p className='py-2 text-white underline cursor-pointer'>
               Check out some of my latest projects.
             </p>
-          </Link>
+          </Link> */}
         </div>
         <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
           <img src={Fernando.src} className='rounded-xl' alt='/' />
